@@ -1,0 +1,7 @@
+version: "2"
+domain: toinfn.it
+repo: htcontroller
+resources:
+- group: htcondor
+  version: v1
+  kind: Cluster

@@ -1,0 +1,18 @@
+apiVersion: htcondor.toinfn.it/v1
+kind: Cluster
+metadata:
+  name: cluster-sample
+  namespace: svallero
+spec:
+  imageName: svallero/htcondor:test
+  masterCpus: "1"
+  submitterCpus: "1"
+  executorCpus: "6"
+  masterMemory: "5Gi"
+  submitterMemory: "10Gi"
+  executorMemory: "30Gi"
+  minExecutors: 2
+  maxExecutors: 20
+  requestedExecutors: 5
+  secret: "ksjdfhjge129847rnbt"
+  volumeMounts: {"/home": "htcondor-home"}
